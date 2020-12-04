@@ -7,13 +7,12 @@ var damage
 
 function setup() {
   createCanvas(800,400);
-  bullet = createSprite(40,200,50,15)
-  bullet.shapeColor = color(255,255,255)
-  bullet.velocityX = 6
-
-  speed = random(223,321)
+    speed = random(223,321)
   thickness = random(22,83)
   weight = random(30,52)
+  bullet = createSprite(40,200,50,15)
+  bullet.shapeColor = color(255,255,255)
+  bullet.velocityX = speed
 
   wall = createSprite(600,200,thickness,height/2)
   damage = (0.5 * weight * speed * speed)/(thickness * thickness * thickness)
